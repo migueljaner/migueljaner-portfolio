@@ -1,0 +1,194 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "miguel.dev" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - link "Projects" [ref=e7] [cursor=pointer]:
+          - /url: /projects
+        - link "Uses" [ref=e8] [cursor=pointer]:
+          - /url: /uses
+        - link "Courses" [ref=e9] [cursor=pointer]:
+          - /url: /courses
+        - link "Blog" [ref=e10] [cursor=pointer]:
+          - /url: /blog
+      - button "Toggle theme" [ref=e12]:
+        - img [ref=e13]
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "Projects" [level=1] [ref=e20]
+        - paragraph [ref=e21]: Things I've built.
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - button "all" [ref=e24] [cursor=pointer]
+          - button "work" [ref=e25] [cursor=pointer]
+          - button "personal" [ref=e26] [cursor=pointer]
+        - generic [ref=e27]:
+          - button "PHP" [ref=e28] [cursor=pointer]
+          - button "React" [ref=e29] [cursor=pointer]
+          - button "SCSS" [ref=e30] [cursor=pointer]
+          - button "TypeScript" [ref=e31] [cursor=pointer]
+          - button "Solid.js" [ref=e32] [cursor=pointer]
+          - button "Remix" [ref=e33] [cursor=pointer]
+          - button "AWS" [ref=e34] [cursor=pointer]
+          - button "Astro" [ref=e35] [cursor=pointer]
+          - button "Tailwind" [ref=e36] [cursor=pointer]
+          - button "SEO" [ref=e37] [cursor=pointer]
+          - button "WordPress" [ref=e38] [cursor=pointer]
+          - button "Divi" [ref=e39] [cursor=pointer]
+          - button "JavaScript" [ref=e40] [cursor=pointer]
+          - button "HTML" [ref=e41] [cursor=pointer]
+          - button "CSS" [ref=e42] [cursor=pointer]
+          - button "Canvas" [ref=e43] [cursor=pointer]
+      - generic [ref=e44]:
+        - article [ref=e46]:
+          - link "Kredit.de" [ref=e47] [cursor=pointer]:
+            - /url: https://www.kredit.de/
+            - img "Kredit.de" [ref=e48]
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - heading "Kredit.de" [level=3] [ref=e51]:
+                - link "Kredit.de" [ref=e52] [cursor=pointer]:
+                  - /url: https://www.kredit.de/
+              - link "Visit project" [ref=e54] [cursor=pointer]:
+                - /url: https://www.kredit.de/
+                - img [ref=e55]
+            - paragraph [ref=e59]: Large-scale German financial comparison platform. Full-stack development with PHP backend, React frontend, SCSS styling, and complex multi-team collaboration.
+            - generic [ref=e60]:
+              - generic [ref=e61]: PHP
+              - generic [ref=e62]: React
+              - generic [ref=e63]: SCSS
+              - generic [ref=e64]: TypeScript
+        - article [ref=e66]:
+          - link "Privacy Synatix" [ref=e67] [cursor=pointer]:
+            - /url: https://privacy.synatix.net/
+            - img "Privacy Synatix" [ref=e68]
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - heading "Privacy Synatix" [level=3] [ref=e71]:
+                - link "Privacy Synatix" [ref=e72] [cursor=pointer]:
+                  - /url: https://privacy.synatix.net/
+              - link "Visit project" [ref=e74] [cursor=pointer]:
+                - /url: https://privacy.synatix.net/
+                - img [ref=e75]
+            - paragraph [ref=e79]: Consent Manager CMS built with Solid.js and Remix. Handles GDPR-compliant cookie consent across multiple client sites, deployed on AWS S3.
+            - generic [ref=e80]:
+              - generic [ref=e81]: Solid.js
+              - generic [ref=e82]: Remix
+              - generic [ref=e83]: SCSS
+              - generic [ref=e84]: AWS
+        - article [ref=e86]:
+          - link "SaltyTours" [ref=e87] [cursor=pointer]:
+            - /url: https://saltytours.es/en/
+            - img "SaltyTours" [ref=e88]
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - heading "SaltyTours" [level=3] [ref=e91]:
+                - link "SaltyTours" [ref=e92] [cursor=pointer]:
+                  - /url: https://saltytours.es/en/
+              - link "Visit project" [ref=e94] [cursor=pointer]:
+                - /url: https://saltytours.es/en/
+                - img [ref=e95]
+            - paragraph [ref=e99]: Tourism website for a sailing tour company. Built with Astro and Tailwind CSS, focused on performance, SEO, and multilingual support.
+            - generic [ref=e100]:
+              - generic [ref=e101]: Astro
+              - generic [ref=e102]: Tailwind
+              - generic [ref=e103]: SEO
+        - article [ref=e105]:
+          - link "SafetyCraft" [ref=e106] [cursor=pointer]:
+            - /url: https://www.safetycraft.net/
+            - img "SafetyCraft" [ref=e107]
+          - generic [ref=e108]:
+            - generic [ref=e109]:
+              - heading "SafetyCraft" [level=3] [ref=e110]:
+                - link "SafetyCraft" [ref=e111] [cursor=pointer]:
+                  - /url: https://www.safetycraft.net/
+              - link "Visit project" [ref=e113] [cursor=pointer]:
+                - /url: https://www.safetycraft.net/
+                - img [ref=e114]
+            - paragraph [ref=e118]: Web application built with React and Tailwind CSS. Modern UI with focus on clean component architecture.
+            - generic [ref=e119]:
+              - generic [ref=e120]: React
+              - generic [ref=e121]: Tailwind
+              - generic [ref=e122]: TypeScript
+        - article [ref=e124]:
+          - link "Hotel Cas Contador" [ref=e125] [cursor=pointer]:
+            - /url: https://hotelcascontador.com/
+            - img "Hotel Cas Contador" [ref=e126]
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - heading "Hotel Cas Contador" [level=3] [ref=e129]:
+                - link "Hotel Cas Contador" [ref=e130] [cursor=pointer]:
+                  - /url: https://hotelcascontador.com/
+              - link "Visit project" [ref=e132] [cursor=pointer]:
+                - /url: https://hotelcascontador.com/
+                - img [ref=e133]
+            - paragraph [ref=e137]: Hotel website for Agroturismo Cas Contador. WordPress-based with Divi builder, custom SEO, and digital marketing integration.
+            - generic [ref=e138]:
+              - generic [ref=e139]: WordPress
+              - generic [ref=e140]: Divi
+              - generic [ref=e141]: SEO
+        - article [ref=e143]:
+          - link "TicTacToe" [ref=e144] [cursor=pointer]:
+            - /url: https://miguel.janermudoy.com/tictactoe/
+            - img "TicTacToe" [ref=e145]
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - heading "TicTacToe" [level=3] [ref=e148]:
+                - link "TicTacToe" [ref=e149] [cursor=pointer]:
+                  - /url: https://miguel.janermudoy.com/tictactoe/
+              - link "Visit project" [ref=e151] [cursor=pointer]:
+                - /url: https://miguel.janermudoy.com/tictactoe/
+                - img [ref=e152]
+            - paragraph [ref=e156]: Classic TicTacToe game built as a frontend experiment.
+            - generic [ref=e157]:
+              - generic [ref=e158]: JavaScript
+              - generic [ref=e159]: HTML
+              - generic [ref=e160]: CSS
+        - article [ref=e162]:
+          - link "Flip7" [ref=e163] [cursor=pointer]:
+            - /url: https://miguel.janermudoy.com/flip7/
+            - img "Flip7" [ref=e164]
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - heading "Flip7" [level=3] [ref=e167]:
+                - link "Flip7" [ref=e168] [cursor=pointer]:
+                  - /url: https://miguel.janermudoy.com/flip7/
+              - link "Visit project" [ref=e170] [cursor=pointer]:
+                - /url: https://miguel.janermudoy.com/flip7/
+                - img [ref=e171]
+            - paragraph [ref=e175]: Card game Flip7 implemented as a browser game.
+            - generic [ref=e176]:
+              - generic [ref=e177]: JavaScript
+              - generic [ref=e178]: HTML
+              - generic [ref=e179]: CSS
+        - article [ref=e181]:
+          - link "Mouse Follow" [ref=e182] [cursor=pointer]:
+            - /url: https://miguel.janermudoy.com/mousefollow/
+            - img "Mouse Follow" [ref=e183]
+          - generic [ref=e184]:
+            - generic [ref=e185]:
+              - heading "Mouse Follow" [level=3] [ref=e186]:
+                - link "Mouse Follow" [ref=e187] [cursor=pointer]:
+                  - /url: https://miguel.janermudoy.com/mousefollow/
+              - link "Visit project" [ref=e189] [cursor=pointer]:
+                - /url: https://miguel.janermudoy.com/mousefollow/
+                - img [ref=e190]
+            - paragraph [ref=e194]: Interactive mouse-following animation experiment.
+            - generic [ref=e195]:
+              - generic [ref=e196]: JavaScript
+              - generic [ref=e197]: Canvas
+              - generic [ref=e198]: CSS
+  - contentinfo [ref=e199]:
+    - generic [ref=e200]:
+      - generic [ref=e201]: © 2026 Miguel Janer
+      - generic [ref=e202]:
+        - link "GitHub" [ref=e203] [cursor=pointer]:
+          - /url: https://github.com/migueljaner
+        - link "LinkedIn" [ref=e204] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/miguel-janer-mudoy/
+        - link "Email" [ref=e205] [cursor=pointer]:
+          - /url: mailto:migueljanermudoy@gmail.com

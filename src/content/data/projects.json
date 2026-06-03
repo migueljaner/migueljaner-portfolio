@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Kredit.de",
+    "description": "Large-scale German financial comparison platform. Full-stack development with PHP backend, React frontend, SCSS styling, and complex multi-team collaboration.",
+    "tags": ["PHP", "React", "SCSS", "TypeScript"],
+    "url": "https://www.kredit.de/",
+    "github": "",
+    "image": "/images/placeholder-project.svg",
+    "featured": true,
+    "type": "work"
+  },
+  {
+    "title": "Privacy Synatix",
+    "description": "Consent Manager CMS built with Solid.js and Remix. Handles GDPR-compliant cookie consent across multiple client sites, deployed on AWS S3.",
+    "tags": ["Solid.js", "Remix", "SCSS", "AWS"],
+    "url": "https://privacy.synatix.net/",
+    "github": "",
+    "image": "/images/placeholder-project.svg",
+    "featured": true,
+    "type": "work"
+  },
+  {
+    "title": "SaltyTours",
+    "description": "Tourism website for a sailing tour company. Built with Astro and Tailwind CSS, focused on performance, SEO, and multilingual support.",
+    "tags": ["Astro", "Tailwind", "SEO"],
+    "url": "https://saltytours.es/en/",
+    "github": "",
+    "image": "/images/placeholder-project.svg",
+    "featured": true,
+    "type": "personal"
+  },
+  {
+    "title": "SafetyCraft",
+    "description": "Web application built with React and Tailwind CSS. Modern UI with focus on clean component architecture.",
+    "tags": ["React", "Tailwind", "TypeScript"],
+    "url": "https://www.safetycraft.net/",
+    "github": "",
+    "image": "/images/placeholder-project.svg",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "Hotel Cas Contador",
+    "description": "Hotel website for Agroturismo Cas Contador. WordPress-based with Divi builder, custom SEO, and digital marketing integration.",
+    "tags": ["WordPress", "Divi", "SEO"],
+    "url": "https://hotelcascontador.com/",
+    "github": "",
+    "image": "/images/placeholder-project.svg",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "TicTacToe",
+    "description": "Classic TicTacToe game built as a frontend experiment.",
+    "tags": ["JavaScript", "HTML", "CSS"],
+    "url": "https://miguel.janermudoy.com/tictactoe/",
+    "github": "",
+    "image": "/images/placeholder-project.svg",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "Flip7",
+    "description": "Card game Flip7 implemented as a browser game.",
+    "tags": ["JavaScript", "HTML", "CSS"],
+    "url": "https://miguel.janermudoy.com/flip7/",
+    "github": "",
+    "image": "/images/placeholder-project.svg",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "Mouse Follow",
+    "description": "Interactive mouse-following animation experiment.",
+    "tags": ["JavaScript", "Canvas", "CSS"],
+    "url": "https://miguel.janermudoy.com/mousefollow/",
+    "github": "",
+    "image": "/images/placeholder-project.svg",
+    "featured": false,
+    "type": "personal"
+  }
+]

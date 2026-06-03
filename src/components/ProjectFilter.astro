@@ -1,0 +1,93 @@
+---
+interface Props {
+  types: string[];
+  tags: string[];
+}
+
+const { types, tags } = Astro.props;
+---
+
+<div class="project-filters flex flex-col gap-4 mb-8">
+  <div class="flex flex-wrap gap-2">
+    <button
+      class="filter-type-btn tag cursor-pointer hover:opacity-70 transition-opacity active-filter"
+      data-type="all"
+      style="min-height: 44px; padding: 0.35rem 0.85rem;"
+    >
+      all
+    </button>
+    {types.map((type) => (
+      <button
+        class="filter-type-btn tag cursor-pointer hover:opacity-70 transition-opacity"
+        data-type={type}
+        style="min-height: 44px; padding: 0.35rem 0.85rem;"
+      >
+        {type}
+      </button>
+    ))}
+  </div>
+
+  <div class="flex flex-wrap gap-2">
+    {tags.map((tag) => (
+      <button
+        class="filter-tag-btn tag cursor-pointer hover:opacity-70 transition-opacity"
+        data-tag={tag}
+        style="min-height: 36px;"
+      >
+        {tag}
+      </button>
+    ))}
+  </div>
+</div>
+
+<style>
+  .active-filter {
+    background: var(--fg) !important;
+    color: var(--bg) !important;
+    border-color: var(--fg) !important;
+  }
+</style>
+
+<script>
+  let activeType = "all";
+  let activeTags: Set<string> = new Set();
+
+  function applyFilters() {
+    const cards = document.querySelectorAll<HTMLElement>("[data-project-type]");
+    cards.forEach((card) => {
+      const type = card.dataset.projectType ?? "";
+      const tags = (card.dataset.projectTags ?? "").split(",");
+
+      const typeMatch = activeType === "all" || type === activeType;
+      const tagMatch =
+        activeTags.size === 0 || [...activeTags].every((t) => tags.includes(t));
+
+      card.style.display = typeMatch && tagMatch ? "" : "none";
+    });
+  }
+
+  document.querySelectorAll<HTMLButtonElement>(".filter-type-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      activeType = btn.dataset.type ?? "all";
+      document.querySelectorAll(".filter-type-btn").forEach((b) =>
+        b.classList.remove("active-filter")
+      );
+      btn.classList.add("active-filter");
+      applyFilters();
+    });
+  });
+
+  document.querySelectorAll<HTMLButtonElement>(".filter-tag-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const tag = btn.dataset.tag ?? "";
+      if (activeTags.has(tag)) {
+        activeTags.delete(tag);
+        btn.classList.remove("active-filter");
+      } else {
+        activeTags.add(tag);
+        btn.classList.add("active-filter");
+      }
+      applyFilters();
+    });
+  });
+</script>

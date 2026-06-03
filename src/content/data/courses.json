@@ -1,0 +1,113 @@
+{
+  "courses": [
+    {
+      "title": "The Complete JavaScript Course",
+      "author": "Jonas Schmedtmann",
+      "platform": "Udemy",
+      "url": "https://www.udemy.com/course/the-complete-javascript-course/",
+      "completed": true,
+      "year": "2021"
+    },
+    {
+      "title": "Total TypeScript",
+      "author": "Matt Pocock",
+      "platform": "totaltypescript.com",
+      "url": "https://www.totaltypescript.com/",
+      "completed": true,
+      "year": "2023"
+    },
+    {
+      "title": "Node.js Bootcamp",
+      "author": "Jonas Schmedtmann",
+      "platform": "Udemy",
+      "url": "https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/",
+      "completed": true,
+      "year": "2022"
+    },
+    {
+      "title": "Master React Query",
+      "author": "Dominik Dorfmeister",
+      "platform": "query.gg",
+      "url": "https://query.gg/",
+      "completed": true,
+      "year": "2023"
+    },
+    {
+      "title": "AWS Cloud Practitioner",
+      "author": "AWS",
+      "platform": "AWS Training",
+      "url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+      "completed": true,
+      "year": "2023"
+    },
+    {
+      "title": "AWS Developer Associate",
+      "author": "AWS",
+      "platform": "AWS Training",
+      "url": "https://aws.amazon.com/certification/certified-developer-associate/",
+      "completed": true,
+      "year": "2024"
+    }
+  ],
+  "studies": [
+    {
+      "institution": "IES Pau Casesnoves",
+      "location": "Inca",
+      "degree": "Advanced Vocational Training",
+      "field": "Cross-Platform Application Development",
+      "start": "2019",
+      "end": "2021",
+      "modules": [
+        "Mobile Application Development",
+        "Interface Development",
+        "Data Access",
+        "Enterprise Management Systems",
+        "Processes and Services"
+      ]
+    },
+    {
+      "institution": "IES Manacor",
+      "location": "Manacor",
+      "degree": "Advanced Vocational Training",
+      "field": "Marketing and Advertising",
+      "start": "2019",
+      "end": "2021",
+      "modules": [
+        "Digital Marketing",
+        "Commercial Research",
+        "Economic and Financial Management",
+        "Marketing Policies"
+      ]
+    },
+    {
+      "institution": "IES Francesc de Borja Moll",
+      "location": "Palma de Mallorca",
+      "degree": "Advanced Vocational Training",
+      "field": "Web Application Development",
+      "start": "2017",
+      "end": "2019",
+      "modules": [
+        "Client-Side Web Development",
+        "Server-Side Web Development",
+        "Databases",
+        "Web Interface Design",
+        "Web Application Deployment"
+      ]
+    },
+    {
+      "institution": "IES Llucmajor",
+      "location": "Llucmajor",
+      "degree": "High School Diploma",
+      "field": "Science and Technology",
+      "start": "2014",
+      "end": "2016",
+      "modules": [
+        "Mathematics",
+        "Physics",
+        "Technical Drawing",
+        "History of Philosophy",
+        "Research Projects"
+      ]
+    }
+  ]
+}

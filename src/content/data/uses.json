@@ -1,0 +1,38 @@
+{
+  "editor": [
+    {
+      "name": "Cursor",
+      "description": "AI-powered fork of VS Code. My daily driver for all development work."
+    }
+  ],
+  "languages": [
+    { "name": "TypeScript", "icon": "ts" },
+    { "name": "JavaScript", "icon": "js" },
+    { "name": "PHP", "icon": "php" },
+    { "name": "HTML", "icon": "html" },
+    { "name": "CSS", "icon": "css" }
+  ],
+  "skills": [
+    { "name": "Full-Stack Development", "description": "Building end-to-end web applications from database to UI." },
+    { "name": "Web Performance", "description": "Optimizing core web vitals, build pipelines, and runtime performance." },
+    { "name": "SEO", "description": "Technical SEO, structured data, and content optimization." }
+  ],
+  "techs": [
+    { "name": "React", "category": "Frontend" },
+    { "name": "Astro", "category": "Frontend" },
+    { "name": "Solid.js", "category": "Frontend" },
+    { "name": "Remix", "category": "Full-Stack" },
+    { "name": "Node.js", "category": "Backend" },
+    { "name": "Express", "category": "Backend" },
+    { "name": "Tailwind CSS", "category": "Styling" }
+  ],
+  "tools": [
+    { "name": "Git", "description": "Version control." },
+    { "name": "AWS", "description": "S3, CloudFront, EC2 for deployments." },
+    { "name": "Docker", "description": "Containerized development and deployment." },
+    { "name": "Vitest", "description": "Unit and integration testing." },
+    { "name": "Playwright", "description": "End-to-end browser testing." },
+    { "name": "Figma", "description": "Design handoff and prototyping." },
+    { "name": "Jira", "description": "Project and issue tracking." }
+  ]
+}

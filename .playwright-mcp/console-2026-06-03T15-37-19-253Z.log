@@ -1,0 +1,30 @@
+[     182ms] [ERROR] Failed to load resource: the server responded with a status of 504 (Outdated Optimize Dep) @ http://localhost:4325/@id/astro/runtime/client/dev-toolbar/entrypoint.js:0
+[     186ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4325/images/profile.jpg:0
+[     270ms] TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+    at Object.deepExtend (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:968:17)
+    at new pJS (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:127:12)
+    at window.particlesJS (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:1022:17)
+    at initParticles (http://localhost:4325/src/components/ParticlesBackground.astro?astro&type=script&index=0&lang.ts:75:7)
+    at http://localhost:4325/src/components/ParticlesBackground.astro?astro&type=script&index=0&lang.ts:77:1
+[    2884ms] [ERROR] Failed to load resource: the server responded with a status of 504 (Outdated Optimize Dep) @ http://localhost:4325/@id/astro/runtime/client/dev-toolbar/entrypoint.js:0
+[    2895ms] TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+    at Object.deepExtend (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:968:17)
+    at new pJS (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:127:12)
+    at window.particlesJS (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:1022:17)
+    at initParticles (http://localhost:4325/src/components/ParticlesBackground.astro?astro&type=script&index=0&lang.ts:75:7)
+    at http://localhost:4325/src/components/ParticlesBackground.astro?astro&type=script&index=0&lang.ts:77:1
+[    3597ms] [ERROR] Failed to load resource: the server responded with a status of 504 (Outdated Optimize Dep) @ http://localhost:4325/@id/astro/runtime/client/dev-toolbar/entrypoint.js:0
+[    3607ms] TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+    at Object.deepExtend (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:968:17)
+    at new pJS (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:127:12)
+    at window.particlesJS (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:1022:17)
+    at initParticles (http://localhost:4325/src/components/ParticlesBackground.astro?astro&type=script&index=0&lang.ts:75:7)
+    at http://localhost:4325/src/components/ParticlesBackground.astro?astro&type=script&index=0&lang.ts:77:1
+[    4219ms] [ERROR] Failed to load resource: the server responded with a status of 504 (Outdated Optimize Dep) @ http://localhost:4325/@id/astro/runtime/client/dev-toolbar/entrypoint.js:0
+[    4231ms] TypeError: 'caller', 'callee', and 'arguments' properties may not be accessed on strict mode functions or the arguments objects for calls to them
+    at Object.deepExtend (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:968:17)
+    at new pJS (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:127:12)
+    at window.particlesJS (http://localhost:4325/node_modules/.vite/deps/particles__js.js?v=3962a112:1022:17)
+    at initParticles (http://localhost:4325/src/components/ParticlesBackground.astro?astro&type=script&index=0&lang.ts:75:7)
+    at http://localhost:4325/src/components/ParticlesBackground.astro?astro&type=script&index=0&lang.ts:77:1
+[    4228ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4325/images/profile.jpg:0

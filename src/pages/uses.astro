@@ -1,0 +1,219 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import uses from "../content/data/uses.json";
+
+// Group techs by category
+const techCategories = uses.techs.reduce<Record<string, typeof uses.techs>>(
+  (acc, tech) => {
+    if (!acc[tech.category]) acc[tech.category] = [];
+    acc[tech.category].push(tech);
+    return acc;
+  },
+  {}
+);
+
+const categoryOrder = ["Frontend", "Full-Stack", "Backend", "Styling"];
+const sortedCategories = categoryOrder.filter((c) => techCategories[c]);
+---
+
+<BaseLayout title="Uses" description="Tools, languages, and tech I work with every day.">
+  <div class="max-w-4xl mx-auto px-6 py-20">
+
+    <!-- Page header -->
+    <header class="mb-16" data-uses-header>
+      <h1 class="text-4xl font-bold tracking-tight mb-3" style="color: var(--fg);">
+        Uses
+      </h1>
+      <p class="font-mono text-sm" style="color: var(--muted);">
+        What I work with every day.
+      </p>
+    </header>
+
+    <!-- Editor section -->
+    <section class="mb-16" data-uses-section>
+      <h2
+        class="font-mono text-xs tracking-widest uppercase mb-6"
+        style="color: var(--muted);"
+      >
+        // EDITOR
+      </h2>
+      {uses.editor.map((item) => (
+        <div
+          class="bg-card border border-default rounded-lg p-6"
+          data-uses-item
+        >
+          <p class="text-xl font-bold mb-2" style="color: var(--fg);">
+            {item.name}
+          </p>
+          <p class="text-sm" style="color: var(--muted);">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </section>
+
+    <!-- Divider -->
+    <hr class="mb-16 border-t" style="border-color: var(--border);" />
+
+    <!-- Languages section -->
+    <section class="mb-16" data-uses-section>
+      <h2
+        class="font-mono text-xs tracking-widest uppercase mb-6"
+        style="color: var(--muted);"
+      >
+        // LANGUAGES
+      </h2>
+      <div class="flex flex-wrap gap-2" data-uses-stagger>
+        {uses.languages.map((lang) => (
+          <span class="tag" data-uses-item>
+            {lang.name}
+          </span>
+        ))}
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="mb-16 border-t" style="border-color: var(--border);" />
+
+    <!-- Skills section -->
+    <section class="mb-16" data-uses-section>
+      <h2
+        class="font-mono text-xs tracking-widest uppercase mb-6"
+        style="color: var(--muted);"
+      >
+        // SKILLS
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-uses-stagger>
+        {uses.skills.map((skill) => (
+          <div
+            class="bg-card border border-default rounded-lg p-5"
+            data-uses-item
+          >
+            <p class="font-bold mb-1" style="color: var(--fg);">
+              {skill.name}
+            </p>
+            <p class="text-sm" style="color: var(--muted);">
+              {skill.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="mb-16 border-t" style="border-color: var(--border);" />
+
+    <!-- Techs section -->
+    <section class="mb-16" data-uses-section>
+      <h2
+        class="font-mono text-xs tracking-widest uppercase mb-6"
+        style="color: var(--muted);"
+      >
+        // TECHNOLOGIES
+      </h2>
+      <div class="flex flex-col gap-8" data-uses-stagger>
+        {sortedCategories.map((category) => (
+          <div data-uses-item>
+            <p
+              class="font-mono text-xs uppercase tracking-widest mb-3"
+              style="color: var(--muted);"
+            >
+              {category}
+            </p>
+            <div class="flex flex-wrap gap-2">
+              {techCategories[category].map((tech) => (
+                <span class="tag">{tech.name}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="mb-16 border-t" style="border-color: var(--border);" />
+
+    <!-- Tools section -->
+    <section class="mb-16" data-uses-section>
+      <h2
+        class="font-mono text-xs tracking-widest uppercase mb-6"
+        style="color: var(--muted);"
+      >
+        // TOOLS
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-uses-stagger>
+        {uses.tools.map((tool) => (
+          <div
+            class="bg-card border border-default rounded-lg p-5"
+            data-uses-item
+          >
+            <p class="font-bold mb-1" style="color: var(--fg);">
+              {tool.name}
+            </p>
+            <p class="text-sm" style="color: var(--muted);">
+              {tool.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </div>
+</BaseLayout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Animate page header
+  const header = document.querySelector("[data-uses-header]");
+  if (header) {
+    gsap.from(header, {
+      opacity: 0,
+      y: 24,
+      duration: 0.7,
+      ease: "power2.out",
+    });
+  }
+
+  // Animate each section with ScrollTrigger fade-up
+  const sections = document.querySelectorAll("[data-uses-section]");
+
+  sections.forEach((section) => {
+    // Fade-up the section heading (first child h2)
+    const heading = section.querySelector("h2");
+    if (heading) {
+      gsap.from(heading, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 88%",
+          toggleActions: "play none none none",
+        },
+        opacity: 0,
+        y: 16,
+        duration: 0.5,
+        ease: "power2.out",
+      });
+    }
+
+    // Stagger grid/flex items within the section
+    const items = section.querySelectorAll("[data-uses-item]");
+    if (items.length > 0) {
+      gsap.from(items, {
+        scrollTrigger: {
+          trigger: section,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+        opacity: 0,
+        y: 20,
+        duration: 0.55,
+        stagger: 0.08,
+        ease: "power2.out",
+        delay: 0.1,
+      });
+    }
+  });
+</script>

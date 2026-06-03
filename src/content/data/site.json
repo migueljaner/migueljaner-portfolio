@@ -1,0 +1,15 @@
+{
+  "name": "Miguel Janer",
+  "title": "Full-Stack Developer",
+  "bio": "Full-Stack Developer based in Spain. I build web applications with React, Astro, TypeScript, and Node.js. Passionate about clean code, good UX, and developer tools.",
+  "avatar": "/images/profile.jpg",
+  "contact": {
+    "email": "migueljanermudoy@gmail.com",
+    "github": "https://github.com/migueljaner",
+    "linkedin": "https://www.linkedin.com/in/miguel-janer-mudoy/"
+  },
+  "meta": {
+    "description": "Miguel Janer — Full-Stack Developer building web apps with React, Astro, TypeScript and Node.js.",
+    "url": "https://migueljaner.dev"
+  }
+}

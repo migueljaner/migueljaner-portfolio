@@ -1,0 +1,68 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", (p) => !p.data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formattedDate = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+}).format(post.data.date);
+---
+
+<BaseLayout title={post.data.title} description={post.data.description}>
+  <article class="max-w-2xl mx-auto px-6 pt-28 pb-20">
+    <!-- Back link -->
+    <a
+      href="/blog"
+      class="inline-flex items-center gap-1.5 font-mono text-sm mb-10 hover:opacity-70 transition-opacity"
+      style="color: var(--muted);"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m15 18-6-6 6-6"/>
+      </svg>
+      Blog
+    </a>
+
+    <!-- Article header -->
+    <header class="mb-8">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight leading-tight mb-4">
+        {post.data.title}
+      </h1>
+      <div class="flex flex-wrap items-center gap-4 mb-4">
+        <time
+          class="font-mono text-sm"
+          style="color: var(--muted);"
+          datetime={post.data.date.toISOString()}
+        >
+          {formattedDate}
+        </time>
+        {post.data.tags.length > 0 && (
+          <div class="flex flex-wrap gap-1.5">
+            {post.data.tags.map((tag) => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </div>
+    </header>
+
+    <!-- Divider -->
+    <hr style="border-color: var(--border); margin-bottom: 2rem;" />
+
+    <!-- Post content -->
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

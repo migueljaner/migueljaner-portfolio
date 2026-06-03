@@ -1,0 +1,65 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  tags: string[];
+  slug: string;
+  readingTime?: string;
+}
+
+const { title, description, date, tags, slug, readingTime } = Astro.props;
+
+const formattedDate = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+}).format(date);
+---
+
+<article class="blog-card group flex flex-col gap-3 p-5 rounded-lg border transition-all duration-300">
+  <div class="flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3 font-mono text-xs" style="color: var(--muted);">
+      <time datetime={date.toISOString()}>{formattedDate}</time>
+      {readingTime && (
+        <>
+          <span aria-hidden="true">·</span>
+          <span>{readingTime}</span>
+        </>
+      )}
+    </div>
+    <div class="flex flex-wrap gap-1.5 justify-end">
+      {tags.slice(0, 3).map((tag) => <span class="tag">{tag}</span>)}
+    </div>
+  </div>
+
+  <h3 class="font-semibold text-base leading-snug">
+    <a href={`/blog/${slug}`} class="hover:opacity-70 transition-opacity">
+      {title}
+    </a>
+  </h3>
+
+  <p class="text-sm leading-relaxed flex-1" style="color: var(--muted);">{description}</p>
+
+  <a
+    href={`/blog/${slug}`}
+    class="font-mono text-xs flex items-center gap-1.5 mt-auto pt-1 transition-opacity hover:opacity-70"
+    style="color: var(--muted);"
+  >
+    Read post
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m9 18 6-6-6-6"/>
+    </svg>
+  </a>
+</article>
+
+<style>
+  .blog-card {
+    background: var(--card-bg);
+    border-color: var(--border);
+  }
+  .blog-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+  }
+</style>

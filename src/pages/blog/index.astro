@@ -1,0 +1,59 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+import { readingTime } from "../../utils/readingTime";
+
+const posts = await getCollection("blog", (p) => !p.data.draft);
+
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout
+  title="Blog"
+  description="Thoughts on web development."
+>
+  <section class="max-w-4xl mx-auto px-6 pt-28 pb-20">
+    <!-- Page header -->
+    <div class="mb-10">
+      <h1 class="text-4xl font-bold tracking-tight mb-2">Blog</h1>
+      <p class="font-mono text-sm" style="color: var(--muted);">Thoughts on web development.</p>
+    </div>
+
+    <!-- Cards grid -->
+    <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {posts.map((post) => (
+        <BlogCard
+          title={post.data.title}
+          description={post.data.description}
+          date={post.data.date}
+          tags={post.data.tags}
+          slug={post.id}
+          readingTime={readingTime(post.body ?? "")}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const cards = document.querySelectorAll<HTMLElement>("#blog-grid > .blog-card");
+
+  gsap.from(cards, {
+    y: 24,
+    duration: 0.55,
+    ease: "power2.out",
+    stagger: 0.08,
+    clearProps: "all",
+    scrollTrigger: {
+      trigger: "#blog-grid",
+      start: "top 90%",
+      once: true,
+    },
+  });
+</script>

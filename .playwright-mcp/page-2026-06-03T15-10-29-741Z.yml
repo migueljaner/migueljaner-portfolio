@@ -1,0 +1,51 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "miguel.dev" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "Home" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - link "Projects" [ref=e7] [cursor=pointer]:
+          - /url: /projects
+        - link "Uses" [ref=e8] [cursor=pointer]:
+          - /url: /uses
+        - link "Courses" [ref=e9] [cursor=pointer]:
+          - /url: /courses
+        - link "Blog" [ref=e10] [cursor=pointer]:
+          - /url: /blog
+      - button "Toggle theme" [ref=e12]:
+        - img [ref=e13]
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "Blog" [level=1] [ref=e20]
+        - paragraph [ref=e21]: Thoughts on web development.
+      - article [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - time [ref=e26]: Jan 15, 2024
+            - generic [ref=e27]: ·
+            - generic [ref=e28]: 1 min read
+          - generic [ref=e29]:
+            - generic [ref=e30]: astro
+            - generic [ref=e31]: portfolio
+            - generic [ref=e32]: web-dev
+        - heading "Hello World" [level=3] [ref=e33]:
+          - link "Hello World" [ref=e34] [cursor=pointer]:
+            - /url: /blog/hello-world
+        - paragraph [ref=e35]: The first post on my new developer portfolio. What I built it with and why.
+        - link "Read post" [ref=e36] [cursor=pointer]:
+          - /url: /blog/hello-world
+          - text: Read post
+          - img [ref=e37]
+  - contentinfo [ref=e39]:
+    - generic [ref=e40]:
+      - generic [ref=e41]: © 2026 Miguel Janer
+      - generic [ref=e42]:
+        - link "GitHub" [ref=e43] [cursor=pointer]:
+          - /url: https://github.com/migueljaner
+        - link "LinkedIn" [ref=e44] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/miguel-janer-mudoy/
+        - link "Email" [ref=e45] [cursor=pointer]:
+          - /url: mailto:migueljanermudoy@gmail.com
