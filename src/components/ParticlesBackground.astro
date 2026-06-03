@@ -2,7 +2,7 @@
 
 ---
 
-<div id="particles-js" aria-hidden="true"></div>
+<div id="particles-js" aria-hidden="true" transition:persist="particles-background"></div>
 
 <style>
   #particles-js {
@@ -23,8 +23,24 @@
   type ParticlesGlobal = typeof window & {
     particlesJS?: (id: string, config: Record<string, unknown>) => void;
     pJSDom?: Array<{
-      pJS: { fn: { vendors: { destroypJS: () => void } } };
+      pJS: {
+        particles: {
+          color: { value: string };
+          line_linked: {
+            color: string;
+            color_rgb_line?: { r: number; g: number; b: number };
+          };
+          array: Array<{
+            color: {
+              value: string;
+              rgb?: { r: number; g: number; b: number };
+            };
+          }>;
+        };
+        fn: { vendors: { destroypJS: () => void } };
+      };
     }>;
+    __particlesBackgroundObserver?: MutationObserver;
   };
 
   function readColor(variable: string, fallback: string) {
@@ -105,43 +121,80 @@
     };
   }
 
-  function destroyParticles() {
+  function hexToRgb(hex: string) {
+    const normalized = hex.replace("#", "");
+    const value =
+      normalized.length === 3
+        ? normalized
+            .split("")
+            .map((char) => char + char)
+            .join("")
+        : normalized;
+    const int = Number.parseInt(value, 16);
+
+    return {
+      r: (int >> 16) & 255,
+      g: (int >> 8) & 255,
+      b: int & 255,
+    };
+  }
+
+  function getThemeColors() {
+    const isDark = document.documentElement.classList.contains("dark");
+    return {
+      particleColor: readColor("--fg", isDark ? "#fafafa" : "#09090b"),
+      lineColor: readColor("--border-hover", isDark ? "#52525b" : "#a1a1aa"),
+    };
+  }
+
+  function getParticlesInstance() {
     const pjs = window as ParticlesGlobal;
-    if (pjs.pJSDom && pjs.pJSDom.length) {
-      pjs.pJSDom.forEach((instance) => {
-        try {
-          instance.pJS.fn.vendors.destroypJS();
-        } catch {
-          /* ignore */
-        }
-      });
-      pjs.pJSDom = [];
-    }
+    return pjs.pJSDom?.[0]?.pJS;
+  }
+
+  function applyThemeColors() {
+    const instance = getParticlesInstance();
+    if (!instance) return;
+
+    const { particleColor, lineColor } = getThemeColors();
+    const particleRgb = hexToRgb(particleColor);
+
+    instance.particles.color.value = particleColor;
+    instance.particles.line_linked.color = lineColor;
+    instance.particles.line_linked.color_rgb_line = hexToRgb(lineColor);
+    instance.particles.array.forEach((particle) => {
+      particle.color.value = particleColor;
+      particle.color.rgb = particleRgb;
+    });
   }
 
   function initParticles() {
     const pjs = window as ParticlesGlobal;
     if (!pjs.particlesJS || !document.getElementById("particles-js")) return;
-    destroyParticles();
+    if (getParticlesInstance()) {
+      applyThemeColors();
+      return;
+    }
+
     pjs.particlesJS("particles-js", buildConfig());
   }
 
   initParticles();
 
-  // Re-render with new colors whenever the theme class on <html> changes.
-  const observer = new MutationObserver((mutations) => {
-    for (const mutation of mutations) {
-      if (mutation.attributeName === "class") {
-        initParticles();
-        break;
+  const pjs = window as ParticlesGlobal;
+  if (!pjs.__particlesBackgroundObserver) {
+    // Recolor the current particle field without regenerating random positions.
+    pjs.__particlesBackgroundObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        if (mutation.attributeName === "class") {
+          applyThemeColors();
+          break;
+        }
       }
-    }
-  });
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["class"],
-  });
-
-  // Support Astro view transitions if enabled later.
-  document.addEventListener("astro:after-swap", initParticles);
+    });
+    pjs.__particlesBackgroundObserver.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
 </script>

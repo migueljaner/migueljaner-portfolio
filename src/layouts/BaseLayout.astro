@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { ClientRouter } from "astro:transitions";
 import Nav from "../components/Nav.astro";
 import ParticlesBackground from "../components/ParticlesBackground.astro";
 import site from "../content/data/site.json";
@@ -48,6 +49,7 @@ const canonicalURL = new URL(Astro.url.pathname, site.meta.url);
       const theme = stored ?? "dark";
       document.documentElement.classList.add(theme);
     </script>
+    <ClientRouter />
   </head>
   <body>
     <ParticlesBackground />
