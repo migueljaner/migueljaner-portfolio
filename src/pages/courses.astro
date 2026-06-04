@@ -25,7 +25,6 @@ const { courses, studies } = data;
       {courses.map((course) => (
         <article
           class="course-card flex flex-col gap-3 p-5 rounded-lg border"
-          style="background: var(--card-bg); border-color: var(--border);"
         >
           <!-- Title row -->
           <div class="flex items-start justify-between gap-3">
@@ -138,3 +137,14 @@ const { courses, studies } = data;
     });
   });
 </script>
+
+<style>
+  .course-card {
+    background: var(--card-bg);
+    border-color: var(--border);
+  }
+  .course-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+  }
+</style>
