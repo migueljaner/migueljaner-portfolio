@@ -45,9 +45,15 @@ const canonicalURL = new URL(Astro.url.pathname, site.meta.url);
     <meta name="twitter:image" content={new URL(image, site.meta.url)} />
 
     <script is:inline>
-      const stored = localStorage.getItem("theme");
-      const theme = stored ?? "dark";
-      document.documentElement.classList.add(theme);
+      function applyTheme(root) {
+        const theme = localStorage.getItem("theme") ?? "dark";
+        root.classList.remove("light", "dark");
+        root.classList.add(theme);
+      }
+      applyTheme(document.documentElement);
+      document.addEventListener("astro:before-swap", (event) => {
+        applyTheme(event.newDocument.documentElement);
+      });
     </script>
     <ClientRouter />
   </head>

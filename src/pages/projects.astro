@@ -28,7 +28,7 @@ const tags = [...new Set(projects.flatMap((p) => p.tags))];
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
     >
       {projects.map((p) => (
-        <div data-project-type={p.type} data-project-tags={p.tags.join(",")}>
+        <div class="h-full" data-project-type={p.type} data-project-tags={p.tags.join(",")}>
           <ProjectCard
             title={p.title}
             description={p.description}

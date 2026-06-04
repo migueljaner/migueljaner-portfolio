@@ -114,39 +114,27 @@ const { courses, studies } = data;
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Stagger fade-up on course cards as page loads
-  const courseCards = document.querySelectorAll<HTMLElement>("#courses-grid .course-card");
-  if (courseCards.length) {
-    gsap.from(courseCards, {
-      opacity: 0,
-      y: 24,
-      duration: 0.5,
-      stagger: 0.08,
-      ease: "power2.out",
-      clearProps: "all",
-      scrollTrigger: {
-        trigger: "#courses-grid",
-        start: "top 90%",
-        once: true,
-      },
-    });
-  }
+  gsap.from("#courses-grid > .course-card", {
+    opacity: 0,
+    y: 24,
+    duration: 0.55,
+    stagger: 0.08,
+    ease: "power2.out",
+  });
 
   // ScrollTrigger fade-up on education entries
   const eduEntries = document.querySelectorAll<HTMLElement>(".education-entry");
-  if (eduEntries.length) {
-    gsap.from(eduEntries, {
+  eduEntries.forEach((entry) => {
+      gsap.from(entry, {
       opacity: 0,
       y: 24,
-      duration: 0.5,
-      stagger: 0.1,
+      duration: 0.55,
       ease: "power2.out",
-      clearProps: "all",
       scrollTrigger: {
-        trigger: ".education-section",
-        start: "top 85%",
+        trigger: entry,
+        start: "top 95%",
         once: true,
-      },
+      }
     });
-  }
+  });
 </script>

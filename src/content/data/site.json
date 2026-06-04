@@ -1,5 +1,6 @@
 {
   "name": "Miguel Janer",
+  "logoText": "MJM",
   "title": "Full-Stack Developer",
   "bio": "Full-Stack Developer based in Spain. I build web applications with React, Astro, TypeScript, and Node.js. Passionate about clean code, good UX, and developer tools.",
   "avatar": "/images/profile.jpg",

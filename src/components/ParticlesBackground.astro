@@ -37,10 +37,17 @@
             };
           }>;
         };
+        interactivity: {
+          events: {
+            onhover: { enable: boolean };
+            onclick: { enable: boolean };
+          };
+        };
         fn: { vendors: { destroypJS: () => void } };
       };
     }>;
     __particlesBackgroundObserver?: MutationObserver;
+    __particlesInteractivityBound?: boolean;
   };
 
   function readColor(variable: string, fallback: string) {
@@ -180,6 +187,24 @@
   }
 
   initParticles();
+
+  const pjsInteractivity = window as ParticlesGlobal;
+  if (!pjsInteractivity.__particlesInteractivityBound) {
+    pjsInteractivity.__particlesInteractivityBound = true;
+    // Disable hover/click particle effects while the pointer is over a content panel.
+    window.addEventListener(
+      "mousemove",
+      (event) => {
+        const instance = getParticlesInstance();
+        if (!instance) return;
+        const el = document.elementFromPoint(event.clientX, event.clientY);
+        const overPanel = !!el?.closest("main > *, footer, header#nav");
+        instance.interactivity.events.onhover.enable = !overPanel;
+        instance.interactivity.events.onclick.enable = !overPanel;
+      },
+      { passive: true },
+    );
+  }
 
   const pjs = window as ParticlesGlobal;
   if (!pjs.__particlesBackgroundObserver) {
