@@ -114,7 +114,7 @@ const latestPosts = allPosts
           alt={site.name}
           width="160"
           height="160"
-          class="rounded-full object-cover border-2"
+          class="profile-blob object-cover border-2"
           style="border-color: var(--border); width: 160px; height: 160px;"
         />
       </div>
@@ -208,6 +208,14 @@ const latestPosts = allPosts
   </section>
 </BaseLayout>
 
+<style>
+  .profile-blob {
+    border-radius: 50%;
+    cursor: pointer;
+    will-change: border-radius, transform;
+  }
+</style>
+
 <script>
   import gsap from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -252,4 +260,54 @@ const latestPosts = allPosts
       },
     });
   }
+
+  function initProfileInteraction() {
+    const img = document.querySelector<HTMLElement>(".profile-blob");
+    if (!img) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    // How strongly the picture is pulled toward the cursor.
+    const strength = 0.35;
+
+    img.addEventListener("mousemove", (event) => {
+      const rect = img.getBoundingClientRect();
+      const relX = event.clientX - (rect.left + rect.width / 2);
+      const relY = event.clientY - (rect.top + rect.height / 2);
+      gsap.to(img, {
+        x: relX * strength,
+        y: relY * strength,
+        duration: 0.5,
+        ease: "power3.out",
+        overwrite: "auto",
+      });
+    });
+
+    img.addEventListener("mouseleave", () => {
+      // Spring back to the center.
+      gsap.to(img, {
+        x: 0,
+        y: 0,
+        duration: 1,
+        ease: "elastic.out(1, 0.3)",
+        overwrite: "auto",
+      });
+      // Wobble the border like settling fluid, then back to a circle.
+      gsap.to(img, {
+        keyframes: {
+          borderRadius: [
+            "62% 38% 54% 46% / 52% 58% 42% 48%",
+            "40% 60% 46% 54% / 58% 44% 56% 42%",
+            "56% 44% 60% 40% / 44% 56% 48% 52%",
+            "50%",
+          ],
+          easeEach: "sine.inOut",
+        },
+        duration: 1.2,
+        ease: "power1.out",
+        overwrite: "auto",
+      });
+    });
+  }
+
+  document.addEventListener("astro:page-load", initProfileInteraction);
 </script>
