@@ -21,6 +21,7 @@
   --tag-fg: #3f3f46;
   --nav-bg: rgba(250, 250, 250, 0.9);
   --section-bg: rgba(250, 250, 250, 0.6);
+  --opposite-bg: #09090b;
 }
 
 /* Dark theme (zinc-950) */
@@ -35,6 +36,7 @@
   --tag-fg: #d4d4d8;
   --nav-bg: rgba(9, 9, 11, 0.9);
   --section-bg: rgba(9, 9, 11, 0.6);
+  --opposite-bg: #fafafa;
 }
 
 *,
