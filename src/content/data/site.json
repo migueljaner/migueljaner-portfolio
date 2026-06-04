@@ -3,7 +3,7 @@
   "logoText": "MJM",
   "title": "Full-Stack Developer",
   "bio": "Full-Stack Developer based in Spain. I build web applications with React, Astro, TypeScript, and Node.js. Passionate about clean code, good UX, and developer tools.",
-  "avatar": "/images/profile.jpg",
+  "avatar": "/images/profile.png",
   "contact": {
     "email": "migueljanermudoy@gmail.com",
     "github": "https://github.com/migueljaner",

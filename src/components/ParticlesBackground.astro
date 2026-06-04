@@ -2,7 +2,12 @@
 
 ---
 
-<div id="particles-js" aria-hidden="true" transition:persist="particles-background"></div>
+<div
+  id="particles-js"
+  aria-hidden="true"
+  transition:persist="particles-background"
+>
+</div>
 
 <style>
   #particles-js {
@@ -108,19 +113,18 @@
         detect_on: "window",
         events: {
           onhover: { enable: true, mode: "grab" },
-          onclick: { enable: true, mode: "push" },
+          onclick: { enable: false},
           resize: true,
         },
         modes: {
           grab: {
-            distance: 300,
+            distance: 100,
             line_linked: {
               opacity: 1,
             },
           },
           push: {
-            particles_nb: 5,
-
+            particles_nb: 2,
           },
         },
       },

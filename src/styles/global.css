@@ -13,7 +13,7 @@
 :root {
   --bg: #fafafa;
   --fg: #09090b;
-  --muted: #71717a;
+  --muted: #828282;
   --border: #e4e4e7;
   --border-hover: #a1a1aa;
   --card-bg: #e4e4e7;
@@ -27,7 +27,7 @@
 :root.dark {
   --bg: #09090b;
   --fg: #fafafa;
-  --muted: #a1a1aa;
+  --muted: #dbdbdb;
   --border: #27272a;
   --border-hover: #52525b;
   --card-bg: #18181b;
@@ -54,7 +54,9 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 a {
