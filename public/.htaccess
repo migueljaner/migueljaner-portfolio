@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^(tictactoe|flip7|mousefollow|fitnessweb|githubusers|moviesearch|randomusers|shopcart|spaceinvaders|lunarlander)(/.*)?$ projects/$1$2 [L]
