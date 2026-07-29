@@ -5,7 +5,7 @@
     "tags": ["PHP", "React", "SCSS", "TypeScript"],
     "url": "https://www.kredit.de/",
     "github": "",
-    "image": "/images/placeholder-project.svg",
+    "image": "/images/projects/kredit-de.png",
     "featured": true,
     "type": "work"
   },
@@ -15,7 +15,7 @@
     "tags": ["Solid.js", "Remix", "SCSS", "AWS"],
     "url": "https://privacy.synatix.net/",
     "github": "",
-    "image": "/images/placeholder-project.svg",
+    "image": "/images/projects/privacy-synatix.png",
     "featured": true,
     "type": "work"
   },
@@ -25,7 +25,7 @@
     "tags": ["Astro", "Tailwind", "SEO"],
     "url": "https://saltytours.es/en/",
     "github": "",
-    "image": "/images/placeholder-project.svg",
+    "image": "/images/projects/saltytours.png",
     "featured": true,
     "type": "personal"
   },
@@ -35,7 +35,7 @@
     "tags": ["React", "Tailwind", "TypeScript"],
     "url": "https://www.safetycraft.net/",
     "github": "",
-    "image": "/images/placeholder-project.svg",
+    "image": "/images/projects/safetycraft.png",
     "featured": false,
     "type": "personal"
   },
@@ -45,7 +45,7 @@
     "tags": ["WordPress", "Divi", "SEO"],
     "url": "https://hotelcascontador.com/",
     "github": "",
-    "image": "/images/placeholder-project.svg",
+    "image": "/images/projects/hotel-cas-contador.png",
     "featured": false,
     "type": "personal"
   },
@@ -55,7 +55,7 @@
     "tags": ["JavaScript", "HTML", "CSS"],
     "url": "https://miguel.janermudoy.com/tictactoe/",
     "github": "",
-    "image": "/images/placeholder-project.svg",
+    "image": "/images/projects/tictactoe.png",
     "featured": false,
     "type": "personal"
   },
@@ -65,7 +65,7 @@
     "tags": ["JavaScript", "HTML", "CSS"],
     "url": "https://miguel.janermudoy.com/flip7/",
     "github": "",
-    "image": "/images/placeholder-project.svg",
+    "image": "/images/projects/flip7.png",
     "featured": false,
     "type": "personal"
   },
@@ -75,7 +75,7 @@
     "tags": ["JavaScript", "Canvas", "CSS"],
     "url": "https://miguel.janermudoy.com/mousefollow/",
     "github": "",
-    "image": "/images/placeholder-project.svg",
+    "image": "/images/projects/mousefollow.png",
     "featured": false,
     "type": "personal"
   }
