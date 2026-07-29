@@ -78,5 +78,25 @@
     "image": "/images/projects/mousefollow.png",
     "featured": false,
     "type": "personal"
+  },
+  {
+    "title": "Space Invaders",
+    "description": "Classic Space Invaders arcade game built with vanilla JavaScript.",
+    "tags": ["JavaScript", "HTML", "CSS"],
+    "url": "https://miguel.janermudoy.com/spaceinvaders/",
+    "github": "",
+    "image": "/images/projects/spaceinvaders.png",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "Lunar Lander",
+    "description": "Physics-based Lunar Lander game built with vanilla JavaScript.",
+    "tags": ["JavaScript", "HTML", "CSS"],
+    "url": "https://miguel.janermudoy.com/lunarlander/",
+    "github": "",
+    "image": "/images/projects/lunarlander.png",
+    "featured": false,
+    "type": "personal"
   }
 ]
