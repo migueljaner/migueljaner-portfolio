@@ -12,15 +12,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^6.0.1",
-    "@astrojs/rss": "^4.0.18",
-    "@astrojs/sitemap": "^3.7.3",
-    "@fontsource-variable/jetbrains-mono": "^5.2.8",
-    "@fontsource/geist": "^5.2.9",
-    "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.4.3",
-    "gsap": "^3.15.0",
-    "particles.js": "^2.0.0",
-    "tailwindcss": "^4.3.0"
+    "@astrojs/mdx": "6.0.1",
+    "@astrojs/rss": "4.0.18",
+    "@astrojs/sitemap": "3.7.3",
+    "@fontsource-variable/jetbrains-mono": "5.2.8",
+    "@fontsource/geist": "5.2.9",
+    "@tailwindcss/vite": "4.3.0",
+    "astro": "6.4.3",
+    "gsap": "3.15.0",
+    "particles.js": "2.0.0",
+    "tailwindcss": "4.3.0"
   }
 }

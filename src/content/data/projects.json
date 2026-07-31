@@ -98,5 +98,65 @@
     "image": "/images/projects/lunarlander.png",
     "featured": false,
     "type": "personal"
+  },
+  {
+    "title": "EvoGym",
+    "description": "Fitness gym landing page UI built with React, TypeScript, and Vite.",
+    "tags": ["React", "TypeScript", "Vite"],
+    "url": "https://miguel.janermudoy.com/fitnessweb/",
+    "github": "",
+    "image": "/images/projects/fitnessweb.png",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "User Manager",
+    "description": "CRUD user management app built with React and Vite.",
+    "tags": ["React", "JavaScript", "Vite"],
+    "url": "https://miguel.janermudoy.com/githubusers/",
+    "github": "",
+    "image": "/images/projects/githubusers.png",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "Movie Search",
+    "description": "Movie search app built with React and Vite, querying a public movie database API.",
+    "tags": ["React", "JavaScript", "Vite"],
+    "url": "https://miguel.janermudoy.com/moviesearch/",
+    "github": "",
+    "image": "/images/projects/moviesearch.png",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "Random Users",
+    "description": "Technical-test exercise rendering a random user list with sorting, colorizing, and filtering, built with React and TypeScript.",
+    "tags": ["React", "TypeScript", "Vite"],
+    "url": "https://miguel.janermudoy.com/randomusers/",
+    "github": "",
+    "image": "/images/projects/randomusers.png",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "React Shop",
+    "description": "E-commerce shopping cart demo with price and category filters, built with React and Vite.",
+    "tags": ["React", "JavaScript", "Vite"],
+    "url": "https://miguel.janermudoy.com/shopcart/",
+    "github": "",
+    "image": "/images/projects/shopcart.png",
+    "featured": false,
+    "type": "personal"
+  },
+  {
+    "title": "Fita a Fita",
+    "description": "Full-stack tour booking platform for Mallorca. Astro SSR frontend with React islands and Leaflet maps, Express/MongoDB backend with JWT auth, deployed on separate Node.js apps backed by MongoDB Atlas.",
+    "tags": ["Astro", "React", "Express", "MongoDB", "TypeScript"],
+    "url": "https://appfitaafita.janermudoy.com/",
+    "github": "https://github.com/migueljaner/proyecto-dam",
+    "image": "/images/projects/fita-a-fita.png",
+    "featured": true,
+    "type": "personal"
   }
 ]
