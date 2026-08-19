@@ -3,6 +3,14 @@
     {
       "name": "Cursor",
       "description": "AI-powered fork of VS Code. My daily driver for all development work."
+    },
+    {
+      "name": "VS Code",
+      "description": "Go-to editor for projects where I stick to a standard, extension-driven setup."
+    },
+    {
+      "name": "NetBeans",
+      "description": "Used for Java Swing desktop application development."
     }
   ],
   "languages": [
@@ -10,7 +18,9 @@
     { "name": "JavaScript", "icon": "js" },
     { "name": "PHP", "icon": "php" },
     { "name": "HTML", "icon": "html" },
-    { "name": "CSS", "icon": "css" }
+    { "name": "CSS", "icon": "css" },
+    { "name": "Java", "icon": "java" },
+    { "name": "Dart", "icon": "dart" }
   ],
   "skills": [
     { "name": "Full-Stack Development", "description": "Building end-to-end web applications from database to UI." },
@@ -21,10 +31,20 @@
     { "name": "React", "category": "Frontend" },
     { "name": "Astro", "category": "Frontend" },
     { "name": "Solid.js", "category": "Frontend" },
+    { "name": "Next.js", "category": "Frontend" },
+    { "name": "React Router", "category": "Frontend" },
+    { "name": "Framer Motion", "category": "Frontend" },
+    { "name": "Redux Toolkit", "category": "Frontend" },
+    { "name": "TanStack Query", "category": "Frontend" },
     { "name": "Remix", "category": "Full-Stack" },
+    { "name": "Laravel", "category": "Full-Stack" },
     { "name": "Node.js", "category": "Backend" },
     { "name": "Express", "category": "Backend" },
-    { "name": "Tailwind CSS", "category": "Styling" }
+    { "name": "CodeIgniter", "category": "Backend" },
+    { "name": "Tailwind CSS", "category": "Styling" },
+    { "name": "Sass/SCSS", "category": "Styling" },
+    { "name": "Bootstrap", "category": "Styling" },
+    { "name": "Flutter", "category": "Mobile" }
   ],
   "tools": [
     { "name": "Git", "description": "Version control." },
@@ -33,6 +53,13 @@
     { "name": "Vitest", "description": "Unit and integration testing." },
     { "name": "Playwright", "description": "End-to-end browser testing." },
     { "name": "Figma", "description": "Design handoff and prototyping." },
-    { "name": "Jira", "description": "Project and issue tracking." }
+    { "name": "Jira", "description": "Project and issue tracking." },
+    { "name": "Turborepo", "description": "Monorepo build orchestration with pnpm workspaces." },
+    { "name": "ESLint & Prettier", "description": "Linting and formatting across every project." }
+  ],
+  "ai": [
+    { "name": "Claude Code", "description": "AI pair-programming CLI for day-to-day development, from feature work to deployment." },
+    { "name": "MCP Servers", "description": "GitHub, Figma, Playwright, MongoDB, and Hostinger connected via Model Context Protocol for end-to-end agentic workflows." },
+    { "name": "Claude Skills", "description": "Custom packaged workflows for repeatable, repo-specific tasks." }
   ]
 }

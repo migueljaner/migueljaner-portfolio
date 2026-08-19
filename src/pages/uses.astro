@@ -12,7 +12,7 @@ const techCategories = uses.techs.reduce<Record<string, typeof uses.techs>>(
   {}
 );
 
-const categoryOrder = ["Frontend", "Full-Stack", "Backend", "Styling"];
+const categoryOrder = ["Frontend", "Full-Stack", "Backend", "Styling", "Mobile"];
 const sortedCategories = categoryOrder.filter((c) => techCategories[c]);
 ---
 
@@ -152,6 +152,34 @@ const sortedCategories = categoryOrder.filter((c) => techCategories[c]);
             </p>
             <p class="text-sm" style="color: var(--muted);">
               {tool.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <hr class="mb-16 border-t" style="border-color: var(--border);" />
+
+    <!-- AI Tooling section -->
+    <section class="mb-16" data-uses-section>
+      <h2
+        class="font-mono text-xs tracking-widest uppercase mb-6"
+        style="color: var(--muted);"
+      >
+        // AI TOOLING
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-uses-stagger>
+        {uses.ai.map((item) => (
+          <div
+            class="bg-card border border-default rounded-lg p-5"
+            data-uses-item
+          >
+            <p class="font-bold mb-1" style="color: var(--fg);">
+              {item.name}
+            </p>
+            <p class="text-sm" style="color: var(--muted);">
+              {item.description}
             </p>
           </div>
         ))}
