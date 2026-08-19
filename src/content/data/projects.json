@@ -404,5 +404,43 @@
         "body": "Helmet, rate limiting, Mongo query sanitization, and HTTP parameter pollution protection sit in front of the API. Transactional email \u2014 booking confirmations, password resets \u2014 is rendered from Pug templates and sent via Nodemailer."
       }
     ]
+  },
+  {
+    "title": "Historia de Espa\u00f1a",
+    "description": "Interactive node-graph visualization of Spanish history from prehistory to the present, built with Astro and Cytoscape.js.",
+    "tags": ["Astro", "Cytoscape.js", "TypeScript"],
+    "url": "https://miguel.janermudoy.com/historia-espania/",
+    "github": "https://github.com/migueljaner/historia-espania",
+    "image": "/images/projects/historia-espania.png",
+    "featured": false,
+    "type": "personal",
+    "slug": "historia-espania",
+    "architecture": "Single-page Astro app rendering Spanish history as an interactive graph: 14 chronological era columns crossed with 4 category lanes (politics, wars, notable figures, religion), built with Cytoscape.js and around 420 nodes / 395 typed edges hand-curated in JSON. A `GraphController` class owns the single Cytoscape instance and exposes `filterRows()`, `focusNode()`, and `searchNodes()`, wired up by one vanilla-TypeScript island \u2014 deliberately no UI framework, to keep the bundle small. A fixed-vocabulary type system (`EraId`, `RowId`, `EdgeType` unions) keeps the hand-curated dataset internally consistent.",
+    "packages": ["Astro", "Cytoscape.js", "TypeScript"],
+    "notes": [
+      {
+        "title": "Accessibility-first",
+        "body": "Built to WCAG AA with `prefers-reduced-motion` support, full keyboard navigation, and 44px touch targets. A hidden `<details>` text listing of every node/edge ships alongside the graph as a no-JS/screen-reader fallback."
+      }
+    ]
+  },
+  {
+    "title": "Oposici\u00f3n Bombero",
+    "description": "Firefighter civil-service exam-prep app: timed practice exams generated from a 465-question bank across 11 subjects, with results history and a failed-question review loop.",
+    "tags": ["Astro", "React", "Tailwind", "TypeScript"],
+    "url": "https://miguel.janermudoy.com/oposicion-bombero/",
+    "github": "https://github.com/migueljaner/app-bombero",
+    "image": "/images/projects/oposicion-bombero.png",
+    "featured": false,
+    "type": "personal",
+    "slug": "oposicion-bombero",
+    "architecture": "Astro app with React islands (`client:only=\"react\"`) for the interactive exam flow, styled with Tailwind CSS. Fully client-side \u2014 no backend or database; exam settings, results history, and the failed-question review list all persist to `localStorage`. Questions are loaded at build time from 11 flat JSON files under `src/data/questions/` (~465 questions covering the Spanish constitution, local government law, fire physics/hydraulics, hazmat, and Balearic-specific geography/emergency content), then shuffled and filtered client-side per exam.",
+    "packages": ["Astro", "React", "Tailwind CSS", "TypeScript"],
+    "notes": [
+      {
+        "title": "Offline-first, single-user",
+        "body": "No login or backend at all \u2014 every exam result and settings change lives only in the browser's localStorage, so the app works fully offline once loaded but doesn't sync across devices."
+      }
+    ]
   }
 ]
