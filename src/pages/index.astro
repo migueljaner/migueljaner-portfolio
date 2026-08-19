@@ -18,7 +18,7 @@ const latestPosts = allPosts
     (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
       b.data.date.getTime() - a.data.date.getTime(),
   )
-  .slice(0, 3);
+  .slice(0, 4);
 ---
 
 <BaseLayout title="Home" description={site.meta.description}>
@@ -144,7 +144,7 @@ const latestPosts = allPosts
       </a>
     </div>
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+      class="grid grid-cols-1 md:grid-cols-2 gap-5"
       id="projects-grid"
     >
       {
