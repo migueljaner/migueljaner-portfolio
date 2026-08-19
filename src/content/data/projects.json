@@ -2,161 +2,407 @@
   {
     "title": "Kredit.de",
     "description": "Large-scale German financial comparison platform. Full-stack development with PHP backend, React frontend, SCSS styling, and complex multi-team collaboration.",
-    "tags": ["PHP", "React", "SCSS", "TypeScript"],
+    "tags": [
+      "PHP",
+      "React",
+      "SCSS",
+      "TypeScript"
+    ],
     "url": "https://www.kredit.de/",
     "github": "",
     "image": "/images/projects/kredit-de.png",
     "featured": true,
-    "type": "work"
+    "type": "work",
+    "slug": "kredit-de",
+    "architecture": "Large-scale German financial comparison platform built as a multi-team PHP monolith with a React and TypeScript layer for the interactive comparison tools, styled with SCSS. Development is split across several coordinated teams rather than a single owner, following an internal component/design-system approach rather than a single-repo SPA rewrite.",
+    "packages": [
+      "PHP",
+      "React",
+      "TypeScript",
+      "SCSS"
+    ],
+    "notes": [
+      {
+        "title": "Team collaboration",
+        "body": "Built and maintained by multiple coordinated teams; my work focused on the React/TypeScript front-end layer within the wider PHP platform."
+      }
+    ]
   },
   {
     "title": "Privacy Synatix",
     "description": "Consent Manager CMS built with Solid.js and Remix. Handles GDPR-compliant cookie consent across multiple client sites, deployed on AWS S3.",
-    "tags": ["Solid.js", "Remix", "SCSS", "AWS"],
+    "tags": [
+      "Solid.js",
+      "Remix",
+      "SCSS",
+      "AWS"
+    ],
     "url": "https://privacy.synatix.net/",
     "github": "",
     "image": "/images/projects/privacy-synatix.png",
     "featured": true,
-    "type": "work"
+    "type": "work",
+    "slug": "privacy-synatix",
+    "architecture": "Consent Manager CMS built with Solid.js for the reactive UI and Remix for routing and data loading, styled with SCSS and deployed on AWS S3. The same codebase serves GDPR-compliant cookie consent banners embedded across multiple client sites, each with its own configuration.",
+    "packages": [
+      "Solid.js",
+      "Remix",
+      "SCSS",
+      "AWS S3"
+    ],
+    "notes": [
+      {
+        "title": "Multi-tenant by design",
+        "body": "One consent manager deployment configures and serves cookie banners for several separate client sites, rather than being built for a single tenant."
+      }
+    ]
   },
   {
     "title": "SaltyTours",
     "description": "Tourism website for a sailing tour company. Built with Astro and Tailwind CSS, focused on performance, SEO, and multilingual support.",
-    "tags": ["Astro", "Tailwind", "SEO"],
+    "tags": [
+      "Astro",
+      "Tailwind",
+      "SEO"
+    ],
     "url": "https://saltytours.es/en/",
     "github": "",
     "image": "/images/projects/saltytours.png",
     "featured": true,
-    "type": "personal"
+    "type": "personal",
+    "slug": "saltytours",
+    "architecture": "Astro site using React islands for interactive pieces, styled with Tailwind CSS. Content is fully localized across English, German, and Spanish via per-locale JSON dictionaries with `[lang]`-prefixed routing. About nine Astro components handle layout, backed by custom hooks/utilities for hero video scrubbing, scroll-triggered animation, an accordion, and a Swiper-based reviews carousel.",
+    "packages": [
+      "Astro",
+      "React",
+      "Tailwind CSS",
+      "GSAP",
+      "Swiper"
+    ],
+    "notes": [
+      {
+        "title": "i18n routing",
+        "body": "Locale-aware `[lang]/...` routes backed by separate JSON dictionaries per language, rather than a single hardcoded-copy site."
+      },
+      {
+        "title": "Animation layer",
+        "body": "A custom hero video-scrub effect plus GSAP ScrollTrigger animations layered on top of Astro's static output for a more app-like feel without giving up SEO."
+      }
+    ]
   },
   {
     "title": "SafetyCraft",
     "description": "Web application built with React and Tailwind CSS. Modern UI with focus on clean component architecture.",
-    "tags": ["React", "Tailwind", "TypeScript"],
+    "tags": [
+      "React",
+      "Tailwind",
+      "TypeScript"
+    ],
     "url": "https://www.safetycraft.net/",
     "github": "",
     "image": "/images/projects/safetycraft.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "safetycraft",
+    "architecture": "Single-page React application built with TypeScript, Vite, and Tailwind CSS, using Material-Tailwind for base components and Framer Motion for transitions. Client-side routing (react-router) drives five pages, backed by around eight components \u2014 including an image gallery, carousel, boat-model showcase, and a text-reveal animation \u2014 plus a custom scroll-direction hook.",
+    "packages": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Material-Tailwind",
+      "Framer Motion",
+      "react-router"
+    ],
+    "notes": [
+      {
+        "title": "Fully static",
+        "body": "No backend or CMS \u2014 content and product data are hardcoded into components, so every deploy is a full rebuild."
+      }
+    ]
   },
   {
     "title": "Hotel Cas Contador",
     "description": "Hotel website for Agroturismo Cas Contador. WordPress-based with Divi builder, custom SEO, and digital marketing integration.",
-    "tags": ["WordPress", "Divi", "SEO"],
+    "tags": [
+      "WordPress",
+      "Divi",
+      "SEO"
+    ],
     "url": "https://hotelcascontador.com/",
     "github": "",
     "image": "/images/projects/hotel-cas-contador.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "hotel-cas-contador",
+    "architecture": "WordPress site built on the Divi page builder, with custom on-page SEO configuration and digital-marketing integrations layered on top of Divi's visual page structure.",
+    "packages": [
+      "WordPress",
+      "Divi",
+      "SEO"
+    ],
+    "notes": []
   },
   {
     "title": "TicTacToe",
     "description": "Classic TicTacToe game built as a frontend experiment.",
-    "tags": ["JavaScript", "HTML", "CSS"],
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "url": "https://miguel.janermudoy.com/tictactoe/",
     "github": "",
     "image": "/images/projects/tictactoe.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "tic-tac-toe",
+    "architecture": "Classic Tic-Tac-Toe implemented as a vanilla JavaScript frontend experiment \u2014 a plain HTML/CSS/JS game loop with no build step or framework.",
+    "packages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "notes": []
   },
   {
     "title": "Flip7",
     "description": "Card game Flip7 implemented as a browser game.",
-    "tags": ["JavaScript", "HTML", "CSS"],
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "url": "https://miguel.janermudoy.com/flip7/",
     "github": "",
     "image": "/images/projects/flip7.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "flip-7",
+    "architecture": "Browser implementation of the Flip7 card game, built with vanilla JavaScript, HTML, and CSS \u2014 game state and card logic are handled directly in plain JS without a framework.",
+    "packages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "notes": []
   },
   {
     "title": "Mouse Follow",
     "description": "Interactive mouse-following animation experiment.",
-    "tags": ["JavaScript", "Canvas", "CSS"],
+    "tags": [
+      "JavaScript",
+      "Canvas",
+      "CSS"
+    ],
     "url": "https://miguel.janermudoy.com/mousefollow/",
     "github": "",
     "image": "/images/projects/mousefollow.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "mouse-follow",
+    "architecture": "Interactive mouse-following animation built with vanilla JavaScript and the Canvas API \u2014 a pointer-move listener drives a canvas-rendered follower effect, styled with plain CSS.",
+    "packages": [
+      "JavaScript",
+      "Canvas API",
+      "CSS"
+    ],
+    "notes": []
   },
   {
     "title": "Space Invaders",
     "description": "Classic Space Invaders arcade game built with vanilla JavaScript.",
-    "tags": ["JavaScript", "HTML", "CSS"],
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "url": "https://miguel.janermudoy.com/spaceinvaders/",
     "github": "",
     "image": "/images/projects/spaceinvaders.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "space-invaders",
+    "architecture": "Classic Space Invaders arcade game built with vanilla JavaScript, HTML, and CSS \u2014 a single game-loop script handles sprites, collision detection, and scoring with no external libraries.",
+    "packages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "notes": []
   },
   {
     "title": "Lunar Lander",
     "description": "Physics-based Lunar Lander game built with vanilla JavaScript.",
-    "tags": ["JavaScript", "HTML", "CSS"],
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "url": "https://miguel.janermudoy.com/lunarlander/",
     "github": "",
     "image": "/images/projects/lunarlander.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "lunar-lander",
+    "architecture": "Physics-based Lunar Lander game built with vanilla JavaScript, HTML, and CSS \u2014 thrust, gravity, and collision/landing checks are computed manually frame-by-frame with no physics library.",
+    "packages": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "notes": []
   },
   {
     "title": "EvoGym",
     "description": "Fitness gym landing page UI built with React, TypeScript, and Vite.",
-    "tags": ["React", "TypeScript", "Vite"],
+    "tags": [
+      "React",
+      "TypeScript",
+      "Vite"
+    ],
     "url": "https://miguel.janermudoy.com/fitnessweb/",
     "github": "",
     "image": "/images/projects/fitnessweb.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "evogym",
+    "architecture": "Fitness gym landing page built as a React + TypeScript single-page UI, bundled with Vite \u2014 a component-driven marketing page with no backend.",
+    "packages": [
+      "React",
+      "TypeScript",
+      "Vite"
+    ],
+    "notes": []
   },
   {
     "title": "User Manager",
     "description": "CRUD user management app built with React and Vite.",
-    "tags": ["React", "JavaScript", "Vite"],
+    "tags": [
+      "React",
+      "JavaScript",
+      "Vite"
+    ],
     "url": "https://miguel.janermudoy.com/githubusers/",
     "github": "",
     "image": "/images/projects/githubusers.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "user-manager",
+    "architecture": "CRUD user management app built with React and bundled with Vite \u2014 component state drives create/read/update/delete flows against a user list.",
+    "packages": [
+      "React",
+      "JavaScript",
+      "Vite"
+    ],
+    "notes": []
   },
   {
     "title": "Movie Search",
     "description": "Movie search app built with React and Vite, querying a public movie database API.",
-    "tags": ["React", "JavaScript", "Vite"],
+    "tags": [
+      "React",
+      "JavaScript",
+      "Vite"
+    ],
     "url": "https://miguel.janermudoy.com/moviesearch/",
     "github": "",
     "image": "/images/projects/moviesearch.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "movie-search",
+    "architecture": "Movie search app built with React and bundled with Vite, querying a public movie database API and rendering results as the user types/searches.",
+    "packages": [
+      "React",
+      "JavaScript",
+      "Vite"
+    ],
+    "notes": []
   },
   {
     "title": "Random Users",
     "description": "Technical-test exercise rendering a random user list with sorting, colorizing, and filtering, built with React and TypeScript.",
-    "tags": ["React", "TypeScript", "Vite"],
+    "tags": [
+      "React",
+      "TypeScript",
+      "Vite"
+    ],
     "url": "https://miguel.janermudoy.com/randomusers/",
     "github": "",
     "image": "/images/projects/randomusers.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "random-users",
+    "architecture": "Technical-test exercise built with React, TypeScript, and Vite, using TanStack Query for data fetching/caching against a mock API and shadcn/Radix UI components for the sorting, colorizing, and filtering controls.",
+    "packages": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "TanStack Query",
+      "shadcn/ui",
+      "Radix UI"
+    ],
+    "notes": []
   },
   {
     "title": "React Shop",
     "description": "E-commerce shopping cart demo with price and category filters, built with React and Vite.",
-    "tags": ["React", "JavaScript", "Vite"],
+    "tags": [
+      "React",
+      "JavaScript",
+      "Vite"
+    ],
     "url": "https://miguel.janermudoy.com/shopcart/",
     "github": "",
     "image": "/images/projects/shopcart.png",
     "featured": false,
-    "type": "personal"
+    "type": "personal",
+    "slug": "react-shop",
+    "architecture": "E-commerce shopping cart demo built with React and Vite. Cart and filter state are managed through dedicated React Context providers, with custom hooks wiring roughly eight components together for price and category filtering.",
+    "packages": [
+      "React",
+      "JavaScript",
+      "Vite",
+      "React Context"
+    ],
+    "notes": []
   },
   {
     "title": "Fita a Fita",
-    "description": "Full-stack tour booking platform for Mallorca. Astro SSR frontend with React islands and Leaflet maps, Express/MongoDB backend with JWT auth, deployed on separate Node.js apps backed by MongoDB Atlas.",
-    "tags": ["Astro", "React", "Express", "MongoDB", "TypeScript"],
+    "description": "Full-stack tour booking platform for Mallorca. Astro SSR frontend with server islands and Leaflet maps, Express/MongoDB backend with role-based JWT auth, deployed on separate Node.js apps backed by MongoDB Atlas.",
+    "tags": [
+      "Astro",
+      "React",
+      "Express",
+      "MongoDB",
+      "TypeScript"
+    ],
     "url": "https://appfitaafita.janermudoy.com/",
     "github": "https://github.com/migueljaner/proyecto-dam",
     "image": "/images/projects/fita-a-fita.png",
     "featured": true,
-    "type": "personal"
+    "type": "personal",
+    "slug": "fita-a-fita",
+    "architecture": "Full-stack tour booking platform run as a pnpm/Turborepo monorepo with two independently deployable apps: an Astro frontend (SSR, `output: 'server'`) on one subdomain and an Express + MongoDB (Mongoose) API on another. Interactive content uses Astro Server Islands (`server:defer`) rather than client-hydrated React \u2014 the codebase's one `.jsx` component renders server-side only, with no `client:*` directive. The Leaflet map is a native Web Component loaded via a `<script>` tag, not a React component.",
+    "packages": [
+      "Astro",
+      "Leaflet",
+      "Express",
+      "Mongoose",
+      "jsonwebtoken",
+      "bcryptjs",
+      "Multer + Sharp",
+      "Nodemailer"
+    ],
+    "notes": [
+      {
+        "title": "Role-based access",
+        "body": "Four roles \u2014 user, guide, lead-guide, and admin \u2014 are stored on the Mongo user document. The JWT itself only carries the user ID; every protected request re-fetches the user from the database and checks their current role via a `restrictTo(...roles)` middleware applied per route (tour creation/editing needs guide/lead-guide/admin, booking management needs admin/lead-guide, review authorship is user-only). The frontend only hides nav links for non-privileged roles \u2014 actual enforcement happens on the API, not the client."
+      },
+      {
+        "title": "Security & ops",
+        "body": "Helmet, rate limiting, Mongo query sanitization, and HTTP parameter pollution protection sit in front of the API. Transactional email \u2014 booking confirmations, password resets \u2014 is rendered from Pug templates and sent via Nodemailer."
+      }
+    ]
   }
 ]
