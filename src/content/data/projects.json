@@ -104,7 +104,7 @@
     "featured": false,
     "type": "personal",
     "slug": "safetycraft",
-    "architecture": "Single-page React application built with TypeScript, Vite, and Tailwind CSS, using Material-Tailwind for base components and Framer Motion for transitions. Client-side routing (react-router) drives five pages, backed by around eight components \u2014 including an image gallery, carousel, boat-model showcase, and a text-reveal animation \u2014 plus a custom scroll-direction hook.",
+    "architecture": "Single-page React application built with TypeScript, Vite, and Tailwind CSS, using Material-Tailwind for base components and Framer Motion for transitions. Client-side routing (react-router) drives five pages, backed by around eight components — including an image gallery, carousel, boat-model showcase, and a text-reveal animation — plus a custom scroll-direction hook.",
     "packages": [
       "React",
       "TypeScript",
@@ -117,7 +117,7 @@
     "notes": [
       {
         "title": "Fully static",
-        "body": "No backend or CMS \u2014 content and product data are hardcoded into components, so every deploy is a full rebuild."
+        "body": "No backend or CMS — content and product data are hardcoded into components, so every deploy is a full rebuild."
       }
     ]
   },
@@ -157,7 +157,7 @@
     "featured": false,
     "type": "personal",
     "slug": "tic-tac-toe",
-    "architecture": "Classic Tic-Tac-Toe implemented as a vanilla JavaScript frontend experiment \u2014 a plain HTML/CSS/JS game loop with no build step or framework.",
+    "architecture": "Classic Tic-Tac-Toe implemented as a vanilla JavaScript frontend experiment — a plain HTML/CSS/JS game loop with no build step or framework.",
     "packages": [
       "JavaScript",
       "HTML",
@@ -179,7 +179,7 @@
     "featured": false,
     "type": "personal",
     "slug": "flip-7",
-    "architecture": "Browser implementation of the Flip7 card game, built with vanilla JavaScript, HTML, and CSS \u2014 game state and card logic are handled directly in plain JS without a framework.",
+    "architecture": "Browser implementation of the Flip7 card game, built with vanilla JavaScript, HTML, and CSS — game state and card logic are handled directly in plain JS without a framework.",
     "packages": [
       "JavaScript",
       "HTML",
@@ -201,7 +201,7 @@
     "featured": false,
     "type": "personal",
     "slug": "mouse-follow",
-    "architecture": "Interactive mouse-following animation built with vanilla JavaScript and the Canvas API \u2014 a pointer-move listener drives a canvas-rendered follower effect, styled with plain CSS.",
+    "architecture": "Interactive mouse-following animation built with vanilla JavaScript and the Canvas API — a pointer-move listener drives a canvas-rendered follower effect, styled with plain CSS.",
     "packages": [
       "JavaScript",
       "Canvas API",
@@ -223,7 +223,7 @@
     "featured": false,
     "type": "personal",
     "slug": "space-invaders",
-    "architecture": "Classic Space Invaders arcade game built with vanilla JavaScript, HTML, and CSS \u2014 a single game-loop script handles sprites, collision detection, and scoring with no external libraries.",
+    "architecture": "Classic Space Invaders arcade game built with vanilla JavaScript, HTML, and CSS — a single game-loop script handles sprites, collision detection, and scoring with no external libraries.",
     "packages": [
       "JavaScript",
       "HTML",
@@ -245,7 +245,7 @@
     "featured": false,
     "type": "personal",
     "slug": "lunar-lander",
-    "architecture": "Physics-based Lunar Lander game built with vanilla JavaScript, HTML, and CSS \u2014 thrust, gravity, and collision/landing checks are computed manually frame-by-frame with no physics library.",
+    "architecture": "Physics-based Lunar Lander game built with vanilla JavaScript, HTML, and CSS — thrust, gravity, and collision/landing checks are computed manually frame-by-frame with no physics library.",
     "packages": [
       "JavaScript",
       "HTML",
@@ -267,7 +267,7 @@
     "featured": false,
     "type": "personal",
     "slug": "evogym",
-    "architecture": "Fitness gym landing page built as a React + TypeScript single-page UI, bundled with Vite \u2014 a component-driven marketing page with no backend.",
+    "architecture": "Fitness gym landing page built as a React + TypeScript single-page UI, bundled with Vite — a component-driven marketing page with no backend.",
     "packages": [
       "React",
       "TypeScript",
@@ -289,7 +289,7 @@
     "featured": false,
     "type": "personal",
     "slug": "user-manager",
-    "architecture": "CRUD user management app built with React and bundled with Vite \u2014 component state drives create/read/update/delete flows against a user list.",
+    "architecture": "CRUD user management app built with React and bundled with Vite — component state drives create/read/update/delete flows against a user list.",
     "packages": [
       "React",
       "JavaScript",
@@ -383,7 +383,7 @@
     "featured": true,
     "type": "personal",
     "slug": "fita-a-fita",
-    "architecture": "Full-stack tour booking platform run as a pnpm/Turborepo monorepo with two independently deployable apps: an Astro frontend (SSR, `output: 'server'`) on one subdomain and an Express + MongoDB (Mongoose) API on another. Interactive content uses Astro Server Islands (`server:defer`) rather than client-hydrated React \u2014 the codebase's one `.jsx` component renders server-side only, with no `client:*` directive. The Leaflet map is a native Web Component loaded via a `<script>` tag, not a React component.",
+    "architecture": "Full-stack tour booking platform run as a pnpm/Turborepo monorepo with two independently deployable apps: an Astro frontend (SSR, `output: 'server'`) on one subdomain and an Express + MongoDB (Mongoose) API on another. Interactive content uses Astro Server Islands (`server:defer`) rather than client-hydrated React — the codebase's one `.jsx` component renders server-side only, with no `client:*` directive. The Leaflet map is a native Web Component loaded via a `<script>` tag, not a React component.",
     "packages": [
       "Astro",
       "Leaflet",
@@ -397,26 +397,34 @@
     "notes": [
       {
         "title": "Role-based access",
-        "body": "Four roles \u2014 user, guide, lead-guide, and admin \u2014 are stored on the Mongo user document. The JWT itself only carries the user ID; every protected request re-fetches the user from the database and checks their current role via a `restrictTo(...roles)` middleware applied per route (tour creation/editing needs guide/lead-guide/admin, booking management needs admin/lead-guide, review authorship is user-only). The frontend only hides nav links for non-privileged roles \u2014 actual enforcement happens on the API, not the client."
+        "body": "Four roles — user, guide, lead-guide, and admin — are stored on the Mongo user document. The JWT itself only carries the user ID; every protected request re-fetches the user from the database and checks their current role via a `restrictTo(...roles)` middleware applied per route (tour creation/editing needs guide/lead-guide/admin, booking management needs admin/lead-guide, review authorship is user-only). The frontend only hides nav links for non-privileged roles — actual enforcement happens on the API, not the client."
       },
       {
         "title": "Security & ops",
-        "body": "Helmet, rate limiting, Mongo query sanitization, and HTTP parameter pollution protection sit in front of the API. Transactional email \u2014 booking confirmations, password resets \u2014 is rendered from Pug templates and sent via Nodemailer."
+        "body": "Helmet, rate limiting, Mongo query sanitization, and HTTP parameter pollution protection sit in front of the API. Transactional email — booking confirmations, password resets — is rendered from Pug templates and sent via Nodemailer."
       }
     ]
   },
   {
-    "title": "Historia de Espa\u00f1a",
+    "title": "Historia de España",
     "description": "Interactive node-graph visualization of Spanish history from prehistory to the present, built with Astro and Cytoscape.js.",
-    "tags": ["Astro", "Cytoscape.js", "TypeScript"],
+    "tags": [
+      "Astro",
+      "Cytoscape.js",
+      "TypeScript"
+    ],
     "url": "https://miguel.janermudoy.com/historia-espania/",
     "github": "https://github.com/migueljaner/historia-espania",
     "image": "/images/projects/historia-espania.png",
     "featured": false,
     "type": "personal",
-    "slug": "historia-espania",
-    "architecture": "Single-page Astro app rendering Spanish history as an interactive graph: 14 chronological era columns crossed with 4 category lanes (politics, wars, notable figures, religion), built with Cytoscape.js and around 420 nodes / 395 typed edges hand-curated in JSON. A `GraphController` class owns the single Cytoscape instance and exposes `filterRows()`, `focusNode()`, and `searchNodes()`, wired up by one vanilla-TypeScript island \u2014 deliberately no UI framework, to keep the bundle small. A fixed-vocabulary type system (`EraId`, `RowId`, `EdgeType` unions) keeps the hand-curated dataset internally consistent.",
-    "packages": ["Astro", "Cytoscape.js", "TypeScript"],
+    "slug": "historia-de-espana",
+    "architecture": "Single-page Astro app rendering Spanish history as an interactive graph: 14 chronological era columns crossed with 4 category lanes (politics, wars, notable figures, religion), built with Cytoscape.js and around 420 nodes / 395 typed edges hand-curated in JSON. A `GraphController` class owns the single Cytoscape instance and exposes `filterRows()`, `focusNode()`, and `searchNodes()`, wired up by one vanilla-TypeScript island — deliberately no UI framework, to keep the bundle small. A fixed-vocabulary type system (`EraId`, `RowId`, `EdgeType` unions) keeps the hand-curated dataset internally consistent.",
+    "packages": [
+      "Astro",
+      "Cytoscape.js",
+      "TypeScript"
+    ],
     "notes": [
       {
         "title": "Accessibility-first",
@@ -425,21 +433,31 @@
     ]
   },
   {
-    "title": "Oposici\u00f3n Bombero",
+    "title": "Oposición Bombero",
     "description": "Firefighter civil-service exam-prep app: timed practice exams generated from a 465-question bank across 11 subjects, with results history and a failed-question review loop.",
-    "tags": ["Astro", "React", "Tailwind", "TypeScript"],
+    "tags": [
+      "Astro",
+      "React",
+      "Tailwind",
+      "TypeScript"
+    ],
     "url": "https://miguel.janermudoy.com/oposicion-bombero/",
     "github": "https://github.com/migueljaner/app-bombero",
     "image": "/images/projects/oposicion-bombero.png",
     "featured": false,
     "type": "personal",
-    "slug": "oposicion-bombero",
-    "architecture": "Astro app with React islands (`client:only=\"react\"`) for the interactive exam flow, styled with Tailwind CSS. Fully client-side \u2014 no backend or database; exam settings, results history, and the failed-question review list all persist to `localStorage`. Questions are loaded at build time from 11 flat JSON files under `src/data/questions/` (~465 questions covering the Spanish constitution, local government law, fire physics/hydraulics, hazmat, and Balearic-specific geography/emergency content), then shuffled and filtered client-side per exam.",
-    "packages": ["Astro", "React", "Tailwind CSS", "TypeScript"],
+    "slug": "app-bombero",
+    "architecture": "Astro app with React islands (`client:only=\"react\"`) for the interactive exam flow, styled with Tailwind CSS. Fully client-side — no backend or database; exam settings, results history, and the failed-question review list all persist to `localStorage`. Questions are loaded at build time from 11 flat JSON files under `src/data/questions/` (~465 questions covering the Spanish constitution, local government law, fire physics/hydraulics, hazmat, and Balearic-specific geography/emergency content), then shuffled and filtered client-side per exam.",
+    "packages": [
+      "Astro",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
+    ],
     "notes": [
       {
         "title": "Offline-first, single-user",
-        "body": "No login or backend at all \u2014 every exam result and settings change lives only in the browser's localStorage, so the app works fully offline once loaded but doesn't sync across devices."
+        "body": "No login or backend at all — every exam result and settings change lives only in the browser's localStorage, so the app works fully offline once loaded but doesn't sync across devices."
       }
     ]
   }
