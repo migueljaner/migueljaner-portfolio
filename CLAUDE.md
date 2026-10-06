@@ -86,3 +86,6 @@ copies everything under `public/` verbatim, dotfiles included).
   three hosting shapes it should use.
 - `.claude/mcp-tools-reference.md` — which MCP servers/tools were used this session
   and their sharp edges.
+- `.mcp.json` — project MCP servers (`github`, `hostinger-hosting`). Tokens are
+  `${GITHUB_PAT}` / `${HOSTINGER_API_TOKEN}` placeholders; the real values live in the
+  git-ignored `.claude/settings.local.json` `env` block. Never commit them.
